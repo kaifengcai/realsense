@@ -27,8 +27,8 @@ import os.path
 import pickle
 from PIL import Image, ImageDraw
 import face_recognition
-from face_recognition.face_recognition_cli import image_files_in_folder
-
+from face_recognition.face_cli import image_files_in_folder
+from face
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 
@@ -168,12 +168,12 @@ if __name__ == "__main__":
     # STEP 1: Train the KNN classifier and save it to disk
     # Once the model is trained and saved, you can skip this step next time.
     print("Training KNN classifier...")
-    classifier = train("knn_examples/train", model_save_path="trained_knn_model.clf", n_neighbors=2)
+    classifier = train("train", model_save_path="trained_knn_model.clf", n_neighbors=2)
     print("Training complete!")
 
     # STEP 2: Using the trained classifier, make predictions for unknown images
-    for image_file in os.listdir("knn_examples/test"):
-        full_file_path = os.path.join("knn_examples/test", image_file)
+    for image_file in os.listdir("test"):
+        full_file_path = os.path.join("test", image_file)
 
         print("Looking for faces in {}".format(image_file))
 

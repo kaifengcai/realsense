@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 import face_recognition
 
 # Load the jpg file into a numpy array
-image = face_recognition.load_image_file("face_picture/rgb/2_Color.png")
+image = face_recognition.load_image_file("train/jin/2_Color.png")
 
 # Find all facial features in all the faces in the image
 face_landmarks_list = face_recognition.face_landmarks(image)
